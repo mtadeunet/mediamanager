@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1067</width>
+    <height>560</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="1">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>File Raname</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Path:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="browseButton">
+          <property name="text">
+           <string>Browse...</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QSpinBox" name="iphone_mov"/>
+        </item>
+        <item row="16" column="0">
+         <widget class="QPlainTextEdit" name="output"/>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>DJI Pocket:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>iPhone MOV</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QSpinBox" name="dji_pocket"/>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>JPEG</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="2">
+         <widget class="QSpinBox" name="iphone_img"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="path"/>
+        </item>
+        <item row="16" column="1">
+         <widget class="QPushButton" name="clearOutput">
+          <property name="text">
+           <string>Clear</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="renameButton">
+          <property name="text">
+           <string>Rename</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="currentFilename">
+          <property name="text">
+           <string>None</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QProgressBar" name="fileProgress">
+          <property name="value">
+           <number>0</number>
+          </property>
+          <property name="textVisible">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Hashtags</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="5" column="2">
+         <widget class="QPushButton" name="shuffle">
+          <property name="text">
+           <string>Shuffle</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QSpinBox" name="numberOfHashtags">
+          <property name="value">
+           <number>30</number>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" rowspan="2" colspan="3">
+         <widget class="QPlainTextEdit" name="hashtagOutput"/>
+        </item>
+        <item row="5" column="4">
+         <widget class="QPushButton" name="generateHashtags">
+          <property name="text">
+           <string>Generate Hashtags</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="3">
+         <widget class="QPlainTextEdit" name="sourceHashtags"/>
+        </item>
+        <item row="0" column="3" rowspan="5" colspan="2">
+         <widget class="QTreeWidget" name="hashtagDistribution">
+          <column>
+           <property name="text">
+            <string>Name</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Score</string>
+           </property>
+          </column>
+          <item>
+           <property name="text">
+            <string>Unknown</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Invalid</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Low (&lt; 100%)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Medium (100% to 150%)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Hight (150% to 200%)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Very High (&gt; 200%)</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="5" column="5">
+         <widget class="QPushButton" name="hashtagManagerButton">
+          <property name="text">
+           <string>Hashtag Manager</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="6">
+         <widget class="QPushButton" name="clearSelection">
+          <property name="text">
+           <string>Clear</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="5" colspan="2">
+         <widget class="QListWidget" name="hashtagCollections">
+          <property name="selectionMode">
+           <enum>QAbstractItemView::MultiSelection</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="5">
+         <widget class="QComboBox" name="users"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1067</width>
+     <height>30</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+ <slots>
+  <slot>renameButtonClicked()</slot>
+ </slots>
+</ui>
